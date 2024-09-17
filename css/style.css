@@ -1,0 +1,509 @@
+/* 
+Nibras Nibras 
+#200578629
+July 24th, 2024
+
+Colors:
+Orange # rgb(255,86,8)
+Lighter Orange # rgb(255,125,64)
+Yellow # rgb(255,242,45)
+Brown # rgb(72,44,0)
+Off-White # rgb(254,235,208)
+*/
+
+/* General styling */
+html {
+    scroll-behavior: smooth;
+    background-color: rgb(254,235,208);
+}
+h1 {
+    font-family: "Bebas Neue", sans-serif;
+}
+h2, h3, h4, h5, h6 {
+    font-family: "Bebas Neue", sans-serif;
+}
+p, a, li {
+    font-size: 1.2em;
+    font-family: "Playfair Display", serif;
+    text-decoration: none;
+}
+p {
+    font-weight: 600;
+}
+/* -----------------------header styling -----------------------*/
+header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 175px;
+    z-index: 9999;
+    transition: all .25s linear;
+}
+header div {
+    width: auto;
+    height: 100%;
+    flex-grow: 1;
+}
+header div img{
+    width: auto;
+    height: 100%;
+    padding: 0% 3%;
+}
+header menu {
+    display: flex;
+    list-style: none;
+    padding: 0px 25px;
+    margin: 0;
+}
+header menu li {
+    padding: 0 15px;
+}
+header menu li a {
+    color: rgb(255,242,45);
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 3px;
+}
+/* Header on Scroll */
+.scrolledHeader {
+    height: 85px;
+    background: rgb(255,242,45);
+    background: linear-gradient(to right, #FF5608 0%, rgb(255,242,45) 100%);
+}
+.scrolledHeader a {
+    color: rgb(72,44,0);
+}
+/* Menu List Hover */
+header menu li a:hover {
+    padding: 5px 15px;
+    background-color: rgb(255, 242, 45); 
+    color: rgb(72,44,0);
+    transform: scale(1.1);
+    transition: .5s; 
+    border-radius: 25px;
+}
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: rgb(255, 242, 45);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+  }
+/* -----------------------masthead -----------------------*/
+.masthead {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/5.jpg"), linear-gradient(rgb(255,86,8), rgb(255, 242, 45));
+    background-size: cover, auto;
+    background-repeat: no-repeat, repeat;
+    background-position: center, 0 0;
+    background-attachment: fixed;
+    clip-path: polygon(0% 0%, 0% 90%, 50% 100%, 100% 90%, 100% 0%);
+    display: flex;
+    justify-content: end;
+}
+.masthead div {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url("../img/logo-color.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -----------------------intro styling -----------------------*/
+#introduction {
+    height: 100vh;
+    width: auto;
+    padding: 0px 100px;
+}
+#introduction h1 {
+    font-size: 4.2em;
+    text-align: center;
+    padding-top: 200px;
+    color: rgb(72,44,0);
+}
+#para1 {
+    text-align: center;
+    padding: 80px;
+    line-height: 1.5;
+}
+#para2 {
+    text-align: center;
+    line-height: 1.5;
+    padding-bottom: 40px;
+}
+.container div {
+    padding: 0px 90px;
+}
+/* -----------------------products section styling -----------------------*/
+h5 {
+    font-size: 3.2em;
+    text-align: center;
+    color: rgb(72,44,0);
+    padding: 20px 0px;
+}
+.products, .products2 {
+    height: auto;
+}
+.myProducts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: auto;
+}
+.myProducts2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: auto;
+}
+.PBCups, .PBCups2 {
+    text-align: center;
+}
+.PBCups p, .PBCups2 p {
+    font-size: 2em;
+    font-family: "Bebas Neue", sans-serif;
+    color: rgb(72,44,0);
+    letter-spacing: 1.5px;
+}
+.cost {
+    font-weight: 100;
+    padding-bottom: 20px;
+}
+.PBCups img, .PBCups2 img {
+    width: 250px;
+    min-width: 50px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.PBCups img:hover, .PBCups2 img:hover {
+    animation: pulse 0.6s infinite;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+#PBC1, #PBC3, #PBC5 {
+    background-color: rgb(255,242,45);
+}
+#PBC2, #PBC4, #PBC6 {
+    background-color: rgb(255,125,64);
+}
+
+/* Product image hover effect */
+.PBCups img, .PBCups2 img {
+    max-width: 350px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.PBCups img:hover, .PBCups2 img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+/* -----------------------Embedded Videos----------------------- */
+.embedded-videos {
+    display: flex;
+    flex-direction: column;
+}
+.embedded-videos h5 {
+    padding-top: 100px;
+}
+.vid-container {
+    position: relative;
+}
+.embedded-videos iframe {
+    width: 560px;
+    height: 315px;
+    padding: 10px;
+}
+#how-vid {
+    display: flex;
+    justify-content: center;
+}
+.second-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.embedded-videos h5 {
+    padding-top: 100px;
+}
+/* -----------------------footer----------------------- */
+footer {
+    background-color: rgb(197, 62, 0);
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    padding: 30px;
+}
+/* footer logo */
+.logo-container {
+    position: relative; 
+    display: flex;
+    align-items: center;
+}
+.logo-container a {
+    display: block; 
+    position: relative;
+}
+.behind-logo {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: auto;
+    height: 300px;
+    z-index: 1; 
+}
+.logo {
+    position: relative; 
+    z-index: 2; 
+    width: auto;
+    height: 300px;
+}
+/* Styling the about part */
+.about-us {
+    display: flex;
+    flex-direction: column;
+}
+.about-us h6 {
+    text-align: center;
+    font-size: 2em;
+    color: rgb(72,44,0);
+    padding: 20px 0px;
+}
+.about-us p {
+    text-align: center;
+    padding: 20px 60px 20px 0px;
+}
+/* Styling the icons */
+footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center; 
+}
+footer ul li {
+    margin: 10px 0; 
+    padding: 10px;
+}
+footer ul li i {
+    font-size: 2.5em; 
+    color: rgb(72,44,0); 
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* Hover effect for icons */
+footer ul li i:hover {
+    color: rgb(255, 242, 45); 
+    transform: scale(1.1); 
+}
+/* footer form */
+.footer-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(255, 242, 45);
+    border-radius: 8px;
+}
+.footer-form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+}
+.footer-form form p {
+    margin-bottom: 15px;
+}
+.footer-form form input[type="text"],
+.footer-form form input[type="email"],
+.footer-form form textarea {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1.5px;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgb(72, 44, 0); 
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.footer-form form .submit-container {
+    display: flex;
+    justify-content: center;
+}
+.footer-form form input[type="submit"] {
+    background-color: rgb(255, 86, 8); 
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1.5px;
+    border: none;
+    color: #fefefe;
+    padding: 15px 32px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+.footer-form form input[type="submit"]:hover {
+    background-color: rgb(72,44,0); 
+}
+label {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2em;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 40px;
+    color: rgb(72,44,0);
+}
+/* -----------------------Media Queries----------------------- */
+@media screen and (max-width: 1024px) {
+    #introduction {
+        height: 150vh;
+        width: auto;
+    }
+    #PBC1 p, #PBC2 p, #PBC3 p, #PBC4 p, #PBC5 p, #PBC6 p {
+        padding: 5px;
+    }
+    .second-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .embedded-videos iframe {
+        width: 320px;
+        height: 180px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container div {
+        padding: 10px;
+    }
+    #para1 {
+        padding: 30px;
+    }
+    .myProducts, .myProducts2 {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+    footer {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .logo-container {
+        display: flex;
+        justify-content: center;
+    }
+    .about-us p {
+        text-align: center;
+        padding: 20px 0px;
+    }
+}
+@media screen and (max-width: 500px) {
+    /* add ham menu */
+    nav {
+        display: none;
+    }
+    .hamburger-menu {
+        display: block;
+    }
+    /* Style ham menu */
+    nav.active {
+        display: block;
+        position: absolute;
+        top: 85px;
+        right: 0;
+        width: 100%;
+        background: linear-gradient(to right, #FF5608 0%, #FFF22D 100%);
+    }
+    nav.active menu {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    nav.active menu li {
+        padding: 15px;
+        text-align: center;
+    }
+    nav.active menu li a {
+        color: rgb(72,44,0);
+        font-size: 1.5em;
+    }
+    .container div {
+        padding: 0px;
+    }
+    #introduction {
+        height: max-content;
+        padding: 0px 50px;
+    }
+    #para1 {
+        padding: 20px;
+    }
+    #para2 {
+        padding: 20px 20px 40px 20px;
+    }
+    .PBCups img, .PBCups2 img {
+        width: 200px;
+        height: auto;
+    }
+    .behind-logo {
+        width: auto;
+        height: 200px;
+    }
+    .logo {
+        width: auto;
+        height: 200px;
+    }
+}
+@media screen and (max-width: 426px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+   
+}
+@media screen and (max-width: 375px) {
+    .myProducts, .myProducts2 {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-us p {
+        text-align: center;
+        padding: 0px 20px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .embedded-videos iframe {
+        width: 224px;
+        height: 126px;
+    }
+}
